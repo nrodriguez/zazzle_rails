@@ -4,7 +4,7 @@ require 'open-uri'
 require "cgi"
 module ZazzleRails
   def self.get_products(store_name)
-    products = {:items => {}}
+    products = {:items => []}
     zazzle_feed = Nokogiri::XML(open("http://feed.zazzle.com/#{store_name}/feed")) do |config|
       config.noblanks
     end
@@ -22,7 +22,7 @@ module ZazzleRails
         end
         item_attributes.merge!({"#{item_attr.name}".to_sym => attr_to_add})
       end
-      products[:items].merge!({"item_#{index}".to_sym => item_attributes})
+      products[:items] << item_attributes
     end
     products
   end
