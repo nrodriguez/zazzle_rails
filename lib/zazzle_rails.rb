@@ -1,5 +1,4 @@
 require "zazzle_rails/version"
-require 'feedzirra'
 require 'nokogiri'
 require 'open-uri'
 require "cgi"
