@@ -1,6 +1,8 @@
 # ZazzleRails
 
-TODO: Write a gem description
+A gem geared towards parsing the Zazzle RSS feeds for a given store. 
+
+Ideally this will use their api instead of their RSS when they enable that kind of functionality.
 
 ## Installation
 
@@ -18,7 +20,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use it, simply install and then you can get back your list of products using
+
+    ZazzleRails.get_products("YOUR STORE HERE")
+
+This will return a hash of products from that store in the format of:
+
+    {:items=>
+      {:item_0=>
+        {:guid=>"256512229341746841",
+         :pubDate=>"Wed, 30 Jan 2013 06:10:16 GMT",
+         :title=>"justNeph Messenger Bag",
+         :link=>
+          "http://www.zazzle.com/justneph_messenger_bag_computer_bag-256512229341746841",
+         :author=>"justNeph",
+         :description=>
+          "Got stuff to carry. Got drugs to move. Got a copy of 50 Shades you're embarassed to carry. Get the justNeph Messenger Bag! It's comfortable, spacious and lets people kn
+         :price=>"$169.95",
+         :thumbnail=>
+          "http://rlv.zcache.com/justneph_messenger_bag_computer_bag-r53e6c2d36ac64d40aa15b71a7175d704_vxzzv_8byvr_152.jpg",
+         :content=>
+          "http://rlv.zcache.com/justneph_messenger_bag_computer_bag-r53e6c2d36ac64d40aa15b71a7175d704_vxzzv_8byvr_500.jpg",
+         :keywords=>"justneph, bag, messenger-bag, youtube",
+         :rating=>"g"}
+        }
+      }
+
+With the attributes for each product being
+
+- GUID
+- Published Date
+- Title
+- Link
+- Author
+- Description
+- Price
+- Thumbnail (product image)
+- Content (Full size product image)
+- Keywords
+- Rating
+
 
 ## Contributing
 
