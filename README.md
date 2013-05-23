@@ -1,8 +1,10 @@
 # ZazzleRails
 
 A gem geared towards parsing the Zazzle RSS feeds for a given store. 
-
+ 
 Ideally this will use their api instead of their RSS when they enable that kind of functionality.
+
+[![Gem Version](https://badge.fury.io/rb/zazzle_rails.png)](http://badge.fury.io/rb/zazzle_rails)
 
 ## Installation
 
